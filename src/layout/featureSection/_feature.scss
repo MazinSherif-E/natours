@@ -1,0 +1,51 @@
+.feature_section{
+    padding: 15rem 0;
+
+    @include respond(tab-port){
+        padding: 10rem 0;
+
+    }
+
+    background-image: linear-gradient(  
+        to right , 
+        rgba($color-primary-light  ,0.808) , 
+        rgba($color-primary-dark, 0.808) ) , 
+        url(./nat-4.jpg) ;
+    background-size: cover;
+    margin-top: -10rem;
+    transform: skewY(-4deg);
+    & > * {
+    transform: skewY(4deg);
+    }
+}
+// * takes only the direct child
+
+.featureBox{
+    background-color: rgba($color-white, .9); 
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black , .15);
+    transition: all .2s;
+
+    &__icon{
+        padding: 1rem;
+        font-size: 6rem;
+        margin-bottom: .5rem;
+        background-image: linear-gradient(to left top , $color-primary-dark, $color-primary-light );
+        -webkit-background-clip : text;
+        color: transparent;
+    }
+
+    &__text{
+        font-size: $default-font-size;
+        font-weight: 400;
+    }
+
+    &:hover{
+        transform: scale(1.1) translateY(-0.9rem);
+        box-shadow: 0rem 2.5rem 4rem rgba($color-black, .5);
+
+    }
+}

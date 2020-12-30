@@ -1,0 +1,24 @@
+{
+  "name": "csstest",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "1.1.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "compile:sass": "node-sass src/mainScss/App.scss src/App.css -w",
+    "compress:css": "node-sass src/App.css src/App.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass compress:css",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "node-sass": "^4.14.1",
+    "postcss-cli": "^8.1.0"
+  }
+}
